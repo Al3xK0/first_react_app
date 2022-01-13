@@ -10,7 +10,7 @@ export default function Home( ) {
             <p>
                 Look pook
             </p>
-            <div className='slider'>
+            <div className='slider'> 
                 <img src="" alt="" />
                 <img src="" alt="" />
                 <img src="" alt="" />
