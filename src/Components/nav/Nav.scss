@@ -1,0 +1,33 @@
+@import '../../index.scss';
+
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: green;
+
+    img{
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        width: 7rem;
+    }
+
+    a{
+        margin: 1rem;
+    }
+    
+    @media only screen and(max-width: 1000px) {
+        img{
+            width: 6rem;
+        }
+    }
+
+    @media only screen and(max-width: 900px) {
+        img{
+            width: 5rem;
+        }
+    }
+}
+
