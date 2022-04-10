@@ -1,10 +1,10 @@
 import './Button.scss';
 
-export default function Button({ txt }) {
+export default function Button({text}) {
 
     return (
         <button>
-            {txt}
+            {text}
         </button>
     )
 }

@@ -1,0 +1,118 @@
+@import "../../index.scss";
+
+.consultation {
+    background-image: url(./assets/pngegg.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-color: #f4f7f9;
+
+    header {
+        height: 400px;
+        background-image: url(./assets/header_img.png);
+        background-size: contain;
+        background-position: 100% 0;
+        background-repeat: no-repeat;
+        background-color: #f4f7f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 3rem;
+
+        h2 {
+            color: black;
+            font-size: 3rem !important;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    main {
+        margin-bottom: 2rem;
+        
+        & > .row {
+            div {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+            }
+            figure {
+                width: max-content;
+                margin-right: 0.5rem;
+                &::before {
+                    content: url(./assets/Polygon.png);
+                    display: inline-block;
+                }
+
+                .polygon {
+                    margin: 0 0 0 -0.5rem;
+                }
+            }
+
+            p::after {
+                content: "";
+                color: aqua;
+            }
+        }
+
+        .services {
+            
+            h2{
+                margin: 2rem 0 2rem 0;
+            }
+
+            .row {
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .list_services {
+                    width: 23%;
+                    margin: 1rem 0 0 0;
+
+                    &:nth-of-type(6) {
+                        img,
+                        button {
+                            width: 100%;
+                        }
+                        button{
+                            margin: -2rem 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and(max-width: 1200px) {
+    }
+
+    @media only screen and(max-width: 960px) {
+    }
+
+    @media only screen and(max-width: 890px) {
+    }
+
+    @media only screen and(max-width: 800px) {
+        .container{
+
+            & > .row{
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media only screen and(max-width: 740px) {
+    }
+
+    @media only screen and(max-width: 670px) {
+    }
+
+    @media only screen and(max-width: 600px) {
+    }
+
+    @media only screen and(max-width: 500px) {
+    }
+}

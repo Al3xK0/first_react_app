@@ -1,33 +1,104 @@
 @import '../../index.scss';
 
-nav{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    background-color: green;
+.menu{
+    width: 2rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    fill: $primary;
+    cursor: pointer;
+    display: none;
 
-    img{
-        position: absolute;
-        top: 0.5rem;
-        left: 1rem;
-        width: 7rem;
-    }
-
-    a{
-        margin: 1rem;
-    }
-    
-    @media only screen and(max-width: 1000px) {
-        img{
-            width: 6rem;
-        }
-    }
-
-    @media only screen and(max-width: 900px) {
-        img{
-            width: 5rem;
-        }
+    @media only screen and(max-width: 1200px) {
+        display: block;
     }
 }
 
+nav{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%);
+
+    .close{
+        width: 1.5rem;
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .row{
+        padding: 1rem 0;
+        align-items: center;
+        justify-content: space-between;
+
+        .tabs{
+            width: 70%;
+            text-align: center;
+
+            a{
+                margin: 0 1rem;
+                padding: 0.5rem 0;
+                position: relative;
+                font-weight: 700;
+                font-size: 1.2rem;
+
+                &::after{
+                    content:  '';
+                    width: 0;
+                    height: 0.1rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-color: $primary;
+                    transition: 0.3s;
+                }
+
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and(max-width: 1200px) {
+        width: 18rem;
+        height: 100vh;
+        position: fixed;
+        left: -18rem;
+        background-color: $light;
+        z-index: 1;
+        transition: 0.4s;
+
+        &.open{
+            left: 0;
+        }
+
+        .close{
+            display: block;
+        }
+
+        .row{
+            height: 100%;
+            flex-direction: column;
+
+            .tabs{
+                height: 80%;
+                flex-direction: column;
+                justify-content: start;
+
+                a{
+                    display: block;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and(max-width: 1200px){
+        background-image: none;
+    }
+}

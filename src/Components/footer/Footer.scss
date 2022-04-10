@@ -1,0 +1,72 @@
+@import "../../index.scss";
+
+footer {
+    padding: 3.5rem 0;
+    background-color: #f4f7f9;
+
+    & > .row {
+        justify-content: space-between;
+        align-items: stretch;
+
+        div {
+            &:first-of-type {
+                justify-content: space-between;
+
+                h2 {
+                    margin: 0 0 2rem 0;
+                }
+
+                .row {
+                    margin: 1rem 0 0 0;
+                    align-items: center;
+
+                    a {
+                        margin: 0 0.5rem 0 0;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                width: max-content;
+                text-align: right;
+
+                a,
+                p {
+                    margin: 0.5rem 0 0 0;
+                    white-space: nowrap;
+                }
+
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media only screen and(max-width: 600px) {
+        & > .row {
+            flex-direction: column;
+
+            div {
+                a, p{
+                    font-size: 1.2rem;
+                }
+                
+                &:first-of-type,
+                &:last-of-type {
+                    width: 100%;
+                }
+
+                &:first-of-type{
+                    .row{
+                        justify-content: start;
+                    }
+                }
+
+                &:last-of-type{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,10 @@
-@import '../../index.scss';
+@import "../../index.scss";
+
 
 button{
-    padding: 0.5rem 1rem;
+    background-color: #1B6EB8;
+    color: #fff;
     border-radius: 0.5rem;
-    background-color: blue;
+    height: 3rem;
+    border: none;
 }
